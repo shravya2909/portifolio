@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shravya Gadupuri — Portfolio</title>
+<meta name="description" content="Shravya Gadupuri — Project Coordinator turned technically-fluent delivery lead. Portfolio and case studies.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600&family=Parisienne&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="grain-overlay" aria-hidden="true"></div>
+
+<!-- ============ NAV ============ -->
+<nav class="site-nav" aria-label="Primary">
+  <a href="#top" class="nav-mark">Shravya Gadupuri</a>
+  <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-links" id="nav-links">
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#work">Work</a>
+    <a href="#skills">Skills</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero" id="top">
+  <div class="hero-corner corner-tl" aria-hidden="true"></div>
+  <div class="hero-corner corner-br" aria-hidden="true"></div>
+  <div class="hero-bg-numeral" data-parallax="0.12" aria-hidden="true">SG</div>
+
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <h1 class="hero-name">
+        <span class="hero-name-mask"><span class="hero-name-line" data-hero-el="name1">Shravya</span></span>
+        <span class="hero-name-mask"><span class="hero-name-line hero-name-line--accent" data-hero-el="name2">Gadupuri</span></span>
+      </h1>
+
+      <p class="hero-tagline" data-hero-el="tagline">Turning complexity into systems that ship.</p>
+
+      <div class="hero-meta" data-hero-el="meta">
+        <p class="hero-role">Project Coordinator, KaarTech —<br>building toward Product &amp; Engineering Management</p>
+        <div class="hero-actions">
+          <a href="#work" class="btn btn-solid">View Work</a>
+          <a href="resume2026.pdf" download class="btn btn-outline">Download Résumé</a>
+        </div>
+      </div>
+    </div>
+
+    <!--
+      HERO PORTRAIT — img/portrait-cutout.png is the supplied background-removed
+      cutout (shravya-hero-photo.png), placed as-is inside an arch-topped frame.
+      To swap the photo later: drop a new transparent cutout at
+      img/portrait-cutout.png (same head-and-shoulders-to-waist crop works best)
+      and update the aspect-ratio on .hero-photo-frame in css/style.css if its
+      pixel dimensions differ from 651×1024.
+    -->
+    <div class="hero-photo-slot" data-hero-el="photo">
+      <div class="hero-photo-frame">
+        <img src="img/portrait-cutout.png" alt="Shravya Gadupuri" class="hero-photo-img">
+      </div>
+      <span class="hero-photo-signature">Shravya</span>
+    </div>
+  </div>
+
+  <div class="hero-scroll-cue" aria-hidden="true"><span></span></div>
+</header>
+
+<main>
+
+<!-- ============ FEATURED WORK STRIP ============ -->
+<section class="section featured-strip" id="featured">
+  <div class="featured-strip-head reveal-left">
+    <p class="section-kicker section-kicker--on-dark">Featured Work</p>
+    <h2 class="section-title section-title--on-dark">A few places to start</h2>
+  </div>
+  <div class="featured-tiles">
+    <button class="featured-tile reveal-up" data-project="sprint-health" style="--d:0s">
+      <span class="featured-tile-visual featured-tile-visual--a" aria-hidden="true"><span class="project-icon" data-icon="sprint-health"></span></span>
+      <span class="featured-tile-index">Analytics &amp; Delivery Tooling</span>
+      <h3>Sprint Health Dashboard</h3>
+    </button>
+    <button class="featured-tile reveal-up" data-project="crispr" style="--d:0.12s">
+      <span class="featured-tile-visual featured-tile-visual--b" aria-hidden="true"><span class="project-icon" data-icon="crispr"></span></span>
+      <span class="featured-tile-index">Applied Deep Learning</span>
+      <h3>CRISPR gRNA Prediction</h3>
+    </button>
+    <button class="featured-tile reveal-up" data-project="jarvis" style="--d:0.24s">
+      <span class="featured-tile-visual featured-tile-visual--c" aria-hidden="true"><span class="project-icon" data-icon="jarvis"></span></span>
+      <span class="featured-tile-index">Voice &amp; NLP Assistant</span>
+      <h3>JARVIS</h3>
+    </button>
+  </div>
+  <a href="#work" class="featured-strip-link reveal-up">See the full body of work</a>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="section about panel panel--cream" id="about">
+  <div class="section-head reveal-up">
+    <span class="section-mark" data-icon="about" aria-hidden="true"></span>
+    <p class="section-kicker">About</p>
+    <h2 class="section-title">How I got here</h2>
+  </div>
+
+  <div class="about-body">
+    <p class="about-lede reveal-up">Hi — I'm Shravya. If you asked the people I've worked with what I'm actually good at, most of them wouldn't say "coding" or "project plans." They'd say I'm the one who shows up to a mess and, a few weeks later, there's a system where the mess used to be — watching order emerge from chaos, and knowing I'm the reason it did.</p>
+
+    <p class="reveal-up">It didn't start that way. I started in machine learning, interning at <strong>Spydx</strong>, where I spent most of my time learning and observing how ML and deep learning concepts actually get applied to real-world projects — not client-facing yet, not owning a deployed solution, just paying close attention to how the theory turned into something usable. It was my first real look at the gap between knowing a concept and knowing how it gets used.</p>
+
+    <p class="reveal-up">From there I went a layer deeper into the enterprise side, as an <strong>SAP analyst intern</strong> — learning how SAP systems are actually used, why they're sold to customers in the first place, and the business case underneath most SAP engagements. It wasn't hands-on technical work yet, but it's why I can now sit in a room where SAP comes up and genuinely follow the conversation instead of just nodding along.</p>
+
+    <p class="reveal-up">That grounding is what let the next step click. As a <strong>Customer Success Engineer in AI Automation at Ktern</strong> — KaarTech's AI product arm — I worked directly with enterprise clients figuring out where AI agents could realistically take manual effort off a team's plate — every opportunity had to answer two questions at once: can we build this, and does it move the needle on margin and ROI for the client. That's where the technical and client-facing sides of me finally started talking to each other.</p>
+
+    <p class="reveal-up">Today, as a <strong>Project Coordinator at KaarTech</strong>, it comes together. I coordinate across three client accounts in the UK &amp; Ireland region — <strong>BAE Systems</strong> and <strong>Ramsay Health Care</strong> on AMS/support, and <strong>Life Health Foods</strong> on an ECC-to-S/4HANA transformation — and I own delivery, resourcing, and the client relationship across all of it. Accountability doesn't get to be selective: it's not just claiming the wins, it's owning the misses too.</p>
+
+    <p class="reveal-up">None of this was a random walk. ML taught me to scope an ambiguous problem. SAP taught me how enterprise systems actually work. Customer success taught me to connect technical possibility to business value. Coordination taught me to hold all of it — timelines, people, budgets, trust — at once. Each stage handed me the skill I needed for the next, and it's pointing somewhere specific: my next step in <strong>project, product, or engineering management</strong>, where I get to do all of this on purpose.</p>
+
+    <p class="reveal-up">Outside of client calls and status decks, I'm genuinely a jack-of-all-trades — music, writing, photography, DIY projects, a running interest in interior and fashion design. Same instinct as the day job: taking something with too many moving parts and finding the version with taste and order. Chennai born and raised, and it shows.</p>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section class="section experience panel panel--dark" id="experience">
+  <div class="section-head reveal-up">
+    <span class="section-mark section-mark--on-dark" data-icon="experience" aria-hidden="true"></span>
+    <p class="section-kicker section-kicker--on-dark">Experience</p>
+    <h2 class="section-title section-title--on-dark">Where I've worked</h2>
+    <p class="section-sub section-sub--on-dark">Six roles, one throughline: scope it, understand the system underneath it, connect it to the client, then own the delivery.</p>
+  </div>
+
+  <ol class="timeline">
+    <li class="timeline-item reveal-left">
+      <div class="timeline-date">Jul 2026 — Present</div>
+      <div class="timeline-body">
+        <h3>Project Coordinator</h3>
+        <p class="timeline-org">KaarTech</p>
+        <p>Coordinate delivery of enterprise SAP engagements — tracking milestones, timelines, and cross-team communication across three UK &amp; Ireland client accounts: BAE Systems and Ramsay Health Care on AMS/support, and Life Health Foods on an active ECC-to-S/4HANA transformation. Sit at the intersection of the delivery team and the client relationship, which means the job is as much about surfacing risk early and communicating it plainly as it is about the plan itself.</p>
+      </div>
+    </li>
+    <li class="timeline-item reveal-left">
+      <div class="timeline-date">May 2026 — Jul 2026</div>
+      <div class="timeline-body">
+        <h3>Customer Success Engineer (AI Automation), Intern</h3>
+        <p class="timeline-org">Ktern</p>
+        <p>Onboarded enterprise SAP customers onto AI agents — configuring them to each customer's specific landscape and presenting the results back to stakeholders in terms they could act on. Led an AMS baseline assessment for a global manufacturing client: mapped monitoring coverage across BTP, IDoc, RFC, GRC and Solution Manager, then built the assessment framework and KPI reporting used to track it going forward. Channelled customer issues and feedback into prioritised requirements for product and engineering, effectively working the seam between what the client experienced and what the build teams needed to hear.</p>
+      </div>
+    </li>
+    <li class="timeline-item reveal-left">
+      <div class="timeline-date">Jun 2025 — Jul 2025</div>
+      <div class="timeline-body">
+        <h3>Machine Learning Intern</h3>
+        <p class="timeline-org">Spydx</p>
+        <p>Built and deployed ML solutions end to end, scoping requirements directly with client stakeholders rather than working from a fixed spec — the first place I learned that translating a fuzzy business problem into a well-posed technical one is its own distinct skill.</p>
+      </div>
+    </li>
+    <li class="timeline-item reveal-left">
+      <div class="timeline-date">Aug 2024 — Oct 2024</div>
+      <div class="timeline-body">
+        <h3>Project Manager</h3>
+        <p class="timeline-org">Wizoona</p>
+        <p>Led early-stage product delivery across UI/UX, prototyping and strategy with a cross-functional team, working in the ambiguity that comes with an early-stage product where the plan and the product were often being defined at the same time.</p>
+      </div>
+    </li>
+    <li class="timeline-item reveal-left">
+      <div class="timeline-date">Jul 2024 — Oct 2024</div>
+      <div class="timeline-body">
+        <h3>Project Management Intern</h3>
+        <p class="timeline-org">Foruppo</p>
+        <p>Coordinated delivery across distributed teams, tracking milestones and dependencies using collaborative planning tools — an early lesson in how much of coordination is really just making sure the right information reaches the right person before it becomes a problem.</p>
+      </div>
+    </li>
+    <li class="timeline-item reveal-left">
+      <div class="timeline-date">Sep 2023 — Present</div>
+      <div class="timeline-body">
+        <h3>Technical Support Engineer</h3>
+        <p class="timeline-org">Sruthi Industrial Plastics</p>
+        <p>Automated manufacturing and inventory reporting, replacing manual tracking with data-driven dashboards — a long-running, ongoing engagement that's quietly shaped how I think about turning messy, manual processes into something that reports on itself.</p>
+      </div>
+    </li>
+  </ol>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section class="section projects panel panel--maroon" id="work">
+  <div class="section-head reveal-up">
+    <p class="section-kicker section-kicker--on-dark">Projects</p>
+    <h2 class="section-title section-title--on-dark">Selected work</h2>
+    <p class="section-sub section-sub--on-dark">Ordered by scope and depth. Tap any card for the fuller story.</p>
+  </div>
+
+  <div class="project-grid" id="project-grid">
+
+    <button class="project-card size-xl reveal-scale" data-project="sprint-health">
+      <span class="project-icon" data-icon="sprint-health" aria-hidden="true"></span>
+      <span class="project-card-tag">Featured</span>
+      <h3>Sprint Health Dashboard</h3>
+      <p>A sprint analytics dashboard surfacing team velocity, risk signals, and delivery health for stakeholders who need the status without asking for it.</p>
+    </button>
+
+    <button class="project-card size-xl reveal-scale" data-project="crispr" style="--d:0.1s">
+      <span class="project-icon" data-icon="crispr" aria-hidden="true"></span>
+      <span class="project-card-tag">Featured</span>
+      <h3>Deep Learning-Based Prediction of CRISPR gRNA Efficiency and Off-Target Risk</h3>
+      <p>A CNN-based approach to predicting CRISPR guide RNA efficiency and off-target risk.</p>
+    </button>
+
+    <button class="project-card size-lg reveal-scale" data-project="jarvis" style="--d:0.05s">
+      <span class="project-icon" data-icon="jarvis" aria-hidden="true"></span>
+      <span class="project-card-tag">Jan – Mar 2025</span>
+      <h3>JARVIS — Voice-Activated Personal AI Assistant</h3>
+      <p>Desktop-based AI assistant inspired by Marvel's J.A.R.V.I.S., integrating speech recognition, NLP, and APIs for tasks like web search, email, and reminders.</p>
+    </button>
+
+    <button class="project-card size-lg reveal-scale" data-project="scoliosis" style="--d:0.15s">
+      <span class="project-icon" data-icon="scoliosis" aria-hidden="true"></span>
+      <span class="project-card-tag">Mar – Jun 2025</span>
+      <h3>Scoliosis Detection using Machine Learning</h3>
+      <p>A CNN model detecting scoliosis from spine X-ray images with high accuracy, aimed at supporting earlier diagnosis and reducing manual interpretation errors.</p>
+    </button>
+
+    <button class="project-card size-md reveal-scale" data-project="medico">
+      <span class="project-icon" data-icon="medico" aria-hidden="true"></span>
+      <span class="project-card-tag">Aug 2025 – Present</span>
+      <h3>Medico — AI-Integrated Hospital Management System</h3>
+      <p>A hospital management platform with AI-driven modules for appointments, records, and analytics, improving workflow automation and patient care efficiency.</p>
+    </button>
+
+    <button class="project-card size-md reveal-scale" data-project="numberplate" style="--d:0.1s">
+      <span class="project-icon" data-icon="numberplate" aria-hidden="true"></span>
+      <span class="project-card-tag">Aug 2025</span>
+      <h3>Number Plate Detection using YOLOv8 and EasyOCR</h3>
+      <p>A complete pipeline detecting vehicle number plates with a custom-trained YOLOv8 model, integrated with EasyOCR for text extraction.</p>
+    </button>
+
+    <button class="project-card size-sm reveal-scale" data-project="heart" style="--d:0.2s">
+      <span class="project-icon" data-icon="heart" aria-hidden="true"></span>
+      <h3>Heart Disease Prediction using Machine Learning</h3>
+      <p>Predictive model on the UCI Cleveland dataset, up to 90% accuracy with SVM, benchmarked against other algorithms.</p>
+    </button>
+
+  </div>
+
+  <div class="project-tiles">
+    <button class="project-tile reveal-up" data-project="tictactoe">
+      <h4>Interactive Tic-Tac-Toe (Java + Swing)</h4>
+      <span>Jun 2024</span>
+    </button>
+    <button class="project-tile reveal-up" data-project="2048fruit" style="--d:0.06s">
+      <h4>2048 — Fruit Edition</h4>
+      <span>Game</span>
+    </button>
+    <button class="project-tile reveal-up" data-project="mirrorbeam" style="--d:0.12s">
+      <h4>Mirror Beam</h4>
+      <span>Game</span>
+    </button>
+    <button class="project-tile reveal-up" data-project="pixeldream" style="--d:0.18s">
+      <h4>Pixel Dream</h4>
+      <span>Game</span>
+    </button>
+  </div>
+</section>
+
+<!-- ============ PROJECT MODAL ============ -->
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <button class="modal-close" id="modal-close" aria-label="Close">&times;</button>
+    <p class="modal-tag" id="modal-tag"></p>
+    <h3 class="modal-title" id="modal-title"></h3>
+    <p class="modal-desc" id="modal-desc"></p>
+  </div>
+</div>
+
+<!-- ============ SKILLS — "What I Do" treatment ============ -->
+<section class="section skills panel panel--cream" id="skills">
+  <div class="section-head reveal-up">
+    <p class="section-kicker">What I Do</p>
+    <h2 class="section-title">Where I add value</h2>
+  </div>
+
+  <div class="skills-grid">
+    <div class="skill-col reveal-up">
+      <span class="skill-icon" aria-hidden="true">
+        <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="15" stroke="currentColor" stroke-width="1.5"/><circle cx="20" cy="20" r="4" fill="currentColor"/><path d="M20 5V11M20 29V35M5 20H11M29 20H35" stroke="currentColor" stroke-width="1.5"/></svg>
+      </span>
+      <h3>Delivery &amp; Coordination</h3>
+      <p class="skill-desc">Keeping a live engagement honest — tracking what's actually true against what the plan says, and closing that gap before the client has to ask.</p>
+      <ul class="skill-tags">
+        <li>Project tracking</li>
+        <li>Stakeholder management</li>
+        <li>Requirements gathering</li>
+        <li>Executive reporting</li>
+      </ul>
+    </div>
+    <div class="skill-col reveal-up" style="--d:0.1s">
+      <span class="skill-icon" aria-hidden="true">
+        <svg viewBox="0 0 40 40" fill="none"><rect x="8" y="6" width="24" height="8" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="8" y="16" width="24" height="8" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="8" y="26" width="24" height="8" rx="1" stroke="currentColor" stroke-width="1.5"/></svg>
+      </span>
+      <h3>Enterprise &amp; Data</h3>
+      <p class="skill-desc">Fluent enough in SAP's plumbing to sit in the architecture conversation, and comfortable turning raw operational data into something a stakeholder can decide from.</p>
+      <ul class="skill-tags">
+        <li>SAP / ERP — AMS, WRICEF, BTP, IDoc, RFC, Solution Manager</li>
+        <li>Power BI</li>
+        <li>Tableau</li>
+        <li>Excel</li>
+        <li>SQL</li>
+      </ul>
+    </div>
+    <div class="skill-col reveal-up" style="--d:0.2s">
+      <span class="skill-icon" aria-hidden="true">
+        <svg viewBox="0 0 40 40" fill="none"><path d="M14 12L6 20L14 28" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M26 12L34 20L26 28" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 8L18 32" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </span>
+      <h3>Technical</h3>
+      <p class="skill-desc">Hands-on enough to build the thing myself when it's faster than explaining it to someone else — from a working model to a small internal tool.</p>
+      <ul class="skill-tags">
+        <li>Python</li>
+        <li>Django</li>
+        <li>REST APIs</li>
+        <li>Git / GitHub</li>
+        <li>ML &amp; computer vision</li>
+        <li>Figma</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EDUCATION ============ -->
+<section class="section education panel panel--dark" id="education">
+  <div class="section-head reveal-up">
+    <span class="section-mark section-mark--on-dark" data-icon="education" aria-hidden="true"></span>
+    <p class="section-kicker section-kicker--on-dark">Education &amp; Certifications</p>
+    <h2 class="section-title section-title--on-dark">Foundations</h2>
+  </div>
+
+  <div class="edu-list">
+    <div class="edu-item reveal-left">
+      <h3>B.E. Computer Science</h3>
+      <p class="edu-org">SRM Valliammai Engineering College — CGPA 8.8</p>
+      <p class="edu-date">Nov 2022 — May 2026</p>
+    </div>
+    <div class="edu-item reveal-left" style="--d:0.1s">
+      <h3>CBSE</h3>
+      <p class="edu-org">Chinmaya Vidyalaya, Annanagar — 473/500</p>
+      <p class="edu-date">Apr 2010 — May 2022</p>
+    </div>
+  </div>
+
+  <div class="cert-cluster reveal-up">
+    <h3 class="cert-cluster-title">Data &amp; AI Fundamentals</h3>
+    <div class="cert-cards">
+      <div class="cert-card">
+        <p class="cert-name">Getting Started with Enterprise-grade AI</p>
+        <p class="cert-issuer">IBM · Jul 2024</p>
+      </div>
+      <div class="cert-card">
+        <p class="cert-name">Data Analytics and Visualization Job Simulation</p>
+        <p class="cert-issuer">Accenture North America (Forage) · Jun 2024</p>
+      </div>
+      <div class="cert-card">
+        <p class="cert-name">Introduction to Data Analytics</p>
+        <p class="cert-issuer">Simplilearn · Jun 2024</p>
+      </div>
+      <div class="cert-card">
+        <p class="cert-name">Google Analytics for Beginners</p>
+        <p class="cert-issuer">Google · Jun 2024</p>
+      </div>
+      <div class="cert-card">
+        <p class="cert-name">Data Science with Python</p>
+        <p class="cert-issuer">Great Learning · May 2024</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="cert-cluster reveal-up" style="--d:0.1s">
+    <h3 class="cert-cluster-title">Anthropic / Claude Learning Track</h3>
+    <p class="cert-cluster-note">All 12 courses completed as part of a mandatory GE26 intern learning track.</p>
+    <div class="cert-pills">
+      <span class="cert-pill">Claude 101</span>
+      <span class="cert-pill">AI Capabilities &amp; Limitations</span>
+      <span class="cert-pill">AI Fluency: Framework &amp; Foundations</span>
+      <span class="cert-pill">Building with the Claude API</span>
+      <span class="cert-pill">Introduction to Model Context Protocol (MCP)</span>
+      <span class="cert-pill">MCP: Advanced Topics</span>
+      <span class="cert-pill">Claude Code 101</span>
+      <span class="cert-pill">Claude Code in Action</span>
+      <span class="cert-pill">Introduction to Claude Cowork</span>
+      <span class="cert-pill">Claude with Amazon Bedrock</span>
+      <span class="cert-pill">Claude with Google Cloud Vertex AI</span>
+      <span class="cert-pill">Introduction to Agent Skills</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VOLUNTEERING & TEACHING ============ -->
+<section class="section volunteering panel panel--maroon" id="volunteering">
+  <div class="section-head reveal-up">
+    <span class="section-mark section-mark--on-dark" data-icon="volunteering" aria-hidden="true"></span>
+    <p class="section-kicker section-kicker--on-dark">Volunteering &amp; Teaching</p>
+    <h2 class="section-title section-title--on-dark">Time given, not billed</h2>
+    <p class="section-sub section-sub--on-dark">This is the part of my life that runs alongside the career, not underneath it — ongoing, and genuinely chosen rather than added for the resume.</p>
+  </div>
+
+  <div class="volunteer-list">
+    <div class="volunteer-item reveal-left">
+      <h3>Tutoring</h3>
+      <p class="volunteer-meta">1 year</p>
+      <p>For a year now, I've tutored 10th grade students in Physics, Chemistry, Biology, and Maths, and 11th and 12th grade students in Chemistry, Biology, and Maths — teaching conceptually and practically rather than just theoretically, so it's about application: making sure a student can actually use what they've learned, not just recite it.</p>
+    </div>
+    <div class="volunteer-item reveal-left" style="--d:0.08s">
+      <h3>U&amp;I, Chennai</h3>
+      <p class="volunteer-meta">Nov 2022 — Jul 2023</p>
+      <p>Taught underprivileged children school subjects, spoken and written English, and basic life skills, alongside mentoring them — work that combined showing up consistently with nurturing young minds.</p>
+    </div>
+    <div class="volunteer-item reveal-left" style="--d:0.16s">
+      <h3>Kaar Arakattalai</h3>
+      <p class="volunteer-meta">KaarTech's NGO wing</p>
+      <p>KaarTech's own NGO wing, working to support underprivileged communities with basic life necessities — a way of extending the same support I bring to client work into the community around it.</p>
+    </div>
+    <div class="volunteer-item reveal-left" style="--d:0.24s">
+      <h3>Chinmaya Seva</h3>
+      <p class="volunteer-meta">School years</p>
+      <p>Volunteered during my school years serving in orphanages and old-age homes — early, formative time that shaped a lot of how I think about showing up for people who need consistency more than anything else.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BEYOND THE DESK ============ -->
+<section class="section beyond panel panel--cream" id="beyond">
+  <div class="section-head reveal-up">
+    <span class="section-mark" data-icon="beyond" aria-hidden="true"></span>
+    <p class="section-kicker">Beyond the Desk</p>
+    <h2 class="section-title">A little more about me</h2>
+  </div>
+  <p class="beyond-text reveal-up">Long before status reports, I was the one signing up for every arts, craft, and debate competition going — through school and into college. Competed and won across all three, more times than I can count. If something looked like a new skill or just sounded fun outside the usual routine, I was probably the first to try it. Different stage, same instinct: show up, bring some order to the chaos, and see it through.</p>
+</section>
+
+<!-- ============ SIGN-OFF ============ -->
+<section class="signoff reveal-scale">
+  <p class="signoff-line">Wanna say hi or connect over deadlines and sprints? Drop a mail :)</p>
+  <p class="signoff-signature">Shravya</p>
+</section>
+
+</main>
+
+<!-- ============ FOOTER / CONTACT ============ -->
+<footer class="site-footer" id="contact">
+  <div class="footer-grid">
+    <div class="footer-col footer-mark">
+      <p class="footer-name">Shravya Gadupuri</p>
+      <p class="footer-tagline">Chennai, India</p>
+    </div>
+    <div class="footer-col">
+      <p class="footer-col-title">Contact</p>
+      <a href="mailto:shravyagadupuri@gmail.com">shravyagadupuri@gmail.com</a>
+    </div>
+    <div class="footer-col">
+      <p class="footer-col-title">Elsewhere</p>
+      <a href="https://www.linkedin.com/in/shravyag29/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/shravya2909" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <div class="footer-col">
+      <p class="footer-col-title">Résumé</p>
+      <a href="resume2026.pdf" download class="footer-resume-link">Download PDF</a>
+    </div>
+  </div>
+  <p class="footer-copy">&copy; 2026 Shravya Gadupuri.</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
