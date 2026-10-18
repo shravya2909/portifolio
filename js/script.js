@@ -49,6 +49,30 @@
     heart:
       '<svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">' +
       '<path d="M4 18h5l2.5-7 4 14 3-11 2 4h7.5"/>' +
+      "</svg>",
+    tictactoe:
+      '<svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">' +
+      '<path d="M12 5v22M20 5v22M5 12h22M5 20h22" stroke-opacity="0.55"/>' +
+      '<path d="M6.5 6.5l3 3M9.5 6.5l-3 3"/>' +
+      '<circle cx="16" cy="16" r="2"/>' +
+      '<path d="M22.5 22.5l3 3M25.5 22.5l-3 3"/>' +
+      "</svg>",
+    "2048fruit":
+      '<svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round">' +
+      '<rect x="5" y="5" width="10" height="10" rx="1.5"/><rect x="17" y="5" width="10" height="10" rx="1.5" stroke-opacity="0.55"/>' +
+      '<rect x="5" y="17" width="10" height="10" rx="1.5" stroke-opacity="0.55"/><rect x="17" y="17" width="10" height="10" rx="1.5"/>' +
+      "</svg>",
+    mirrorbeam:
+      '<svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">' +
+      '<path d="M4 8h12l-6 10h18" stroke-opacity="0.6"/>' +
+      '<path d="M13 5l6 6M7 15l6 6"/>' +
+      '<circle cx="28" cy="18" r="1.5" fill="currentColor" stroke="none"/>' +
+      "</svg>",
+    pixeldream:
+      '<svg viewBox="0 0 32 32" fill="currentColor" stroke="none">' +
+      '<rect x="6" y="6" width="5" height="5"/><rect x="13.5" y="6" width="5" height="5" opacity="0.5"/><rect x="21" y="6" width="5" height="5"/>' +
+      '<rect x="6" y="13.5" width="5" height="5" opacity="0.5"/><rect x="13.5" y="13.5" width="5" height="5"/><rect x="21" y="13.5" width="5" height="5" opacity="0.5"/>' +
+      '<rect x="6" y="21" width="5" height="5"/><rect x="13.5" y="21" width="5" height="5" opacity="0.5"/><rect x="21" y="21" width="5" height="5"/>' +
       "</svg>"
   };
 
@@ -155,81 +179,202 @@
     updateParallax();
   }
 
-  // ---------- Project data (full descriptions for modal) ----------
+  // ---------- Scroll progress, scroll-spy nav, timeline rail ----------
+  var progressBar = document.getElementById("scroll-progress-bar");
+  var spyLinks = Array.prototype.slice.call(document.querySelectorAll('.nav-links a[href^="#"]'));
+  var spyTargets = spyLinks
+    .map(function (a) { return document.querySelector(a.getAttribute("href")); })
+    .filter(Boolean);
+  var xpList = document.getElementById("xp-timeline");
+  var xpFill = document.getElementById("xp-rail-fill");
+  var xpItems = xpList ? Array.prototype.slice.call(xpList.querySelectorAll(".xp-item")) : [];
+
+  function onScrollFrame() {
+    var y = window.scrollY || window.pageYOffset;
+    var vh = window.innerHeight;
+    var docH = document.documentElement.scrollHeight - vh;
+
+    if (progressBar) progressBar.style.transform = "scaleX(" + (docH > 0 ? y / docH : 0) + ")";
+
+    var current = null;
+    spyTargets.forEach(function (sec) {
+      if (sec.getBoundingClientRect().top <= vh * 0.35) current = sec.id;
+    });
+    spyLinks.forEach(function (a) {
+      a.classList.toggle("is-active", a.getAttribute("href") === "#" + current);
+    });
+
+    if (xpList && xpFill) {
+      var r = xpList.getBoundingClientRect();
+      var marker = vh * 0.6;
+      var p = Math.min(Math.max((marker - r.top) / r.height, 0), 1);
+      xpFill.style.transform = "scaleY(" + p + ")";
+      xpItems.forEach(function (item) {
+        var dot = item.querySelector(".xp-dot");
+        item.classList.toggle("is-reached", dot.getBoundingClientRect().top <= marker);
+      });
+    }
+  }
+
+  var scrollQueued = false;
+  window.addEventListener("scroll", function () {
+    if (!scrollQueued) {
+      scrollQueued = true;
+      window.requestAnimationFrame(function () { onScrollFrame(); scrollQueued = false; });
+    }
+  }, { passive: true });
+  window.addEventListener("resize", onScrollFrame);
+  onScrollFrame();
+
+  // ---------- Project case studies ----------
+  var GH = "https://github.com/shravya2909/";
   var projects = {
     "sprint-health": {
-      tag: "Featured",
+      tag: "Featured · Full-stack",
       title: "Sprint Health Dashboard",
-      desc: "A sprint analytics dashboard built to surface team velocity, risk signals, and delivery health at a glance — designed so stakeholders can see project status without having to ask for it."
+      image: "img/projects/sprint-health.jpg",
+      imageAlt: "Sprint Health Dashboard team view with velocity, completion and carryover cards above a velocity chart",
+      summary: "A dashboard for engineering managers to track sprint health across teams: velocity, completion, carryover and goals.",
+      built: [
+        "CSV import and live Linear / Azure DevOps sync",
+        "AI-assisted column mapping with Claude",
+        "Trend alerts for rising carryover, bug share and falling velocity"
+      ],
+      impact: "One honest read on how every team's sprints are going, with risks flagged early.",
+      stack: ["React", "Express", "Postgres", "Claude API"],
+      repo: GH + "sprint-health-dashboard"
     },
     "crispr": {
-      tag: "Featured",
+      tag: "Featured · Deep learning",
       title: "Deep Learning-Based Prediction of CRISPR gRNA Efficiency and Off-Target Risk",
-      desc: "A CNN-based approach to predicting CRISPR guide RNA efficiency and off-target risk, applying deep learning to a genuinely high-stakes bioinformatics problem."
+      summary: "A CNN that predicts how well a CRISPR guide RNA works and how likely it is to cut off-target.",
+      impact: "Helps researchers narrow down guide candidates before running costly lab experiments.",
+      stack: ["CNN", "Deep learning", "Bioinformatics"]
     },
     "jarvis": {
-      tag: "Jan 2025 – Mar 2025",
-      title: "JARVIS — Voice-Activated Personal AI Assistant",
-      desc: "Desktop-based AI assistant inspired by Marvel's J.A.R.V.I.S. Integrated speech recognition, NLP, and APIs to perform tasks like web search, email, and reminders."
+      tag: "Jan – Mar 2025 · AI assistant",
+      title: "JARVIS: Voice-Activated Personal AI Assistant",
+      summary: "A desktop assistant inspired by Marvel's J.A.R.V.I.S. that handles web search, email and reminders by voice.",
+      impact: "Turns routine desktop tasks into hands-free commands.",
+      stack: ["Speech recognition", "NLP", "APIs"]
     },
     "scoliosis": {
-      tag: "Mar 2025 – Jun 2025",
+      tag: "Mar – Jun 2025 · Medical imaging",
       title: "Scoliosis Detection using Machine Learning",
-      desc: "Implemented a CNN model to detect scoliosis from spine X-ray images with high accuracy, aimed at supporting earlier diagnosis and reducing manual interpretation errors."
+      summary: "A CNN that detects scoliosis from spine X-ray images with high accuracy.",
+      impact: "Supports earlier diagnosis and fewer manual interpretation errors.",
+      stack: ["CNN", "Computer vision"]
     },
     "medico": {
-      tag: "Aug 2025 – Present",
-      title: "Medico — AI-Integrated Hospital Management System",
-      desc: "Designed a hospital management platform with AI-driven modules for appointments, records, and analytics. Enhanced workflow automation and improved overall patient care efficiency."
+      tag: "Aug 2025 – Present · In progress",
+      title: "Medico: AI-Integrated Hospital Management System",
+      summary: "A hospital platform with AI-driven modules for appointments, records and analytics.",
+      impact: "Cuts manual admin so staff can spend more time on patient care.",
+      stack: ["AI modules", "Workflow automation"]
     },
     "numberplate": {
-      tag: "Aug 2025",
+      tag: "Aug 2025 · Computer vision",
       title: "Number Plate Detection using YOLOv8 and EasyOCR",
-      desc: "Built a complete pipeline to detect vehicle number plates using a custom-trained YOLOv8 model, integrated with EasyOCR for text extraction, achieving high accuracy in detection and recognition."
+      summary: "A pipeline that finds vehicle number plates with a custom-trained YOLOv8 model and reads them with EasyOCR.",
+      impact: "Automates plate reading end to end, the building block for parking, toll and access systems.",
+      stack: ["Python", "YOLOv8", "EasyOCR"]
     },
     "heart": {
-      tag: "Machine Learning",
+      tag: "Machine learning",
       title: "Heart Disease Prediction using Machine Learning",
-      desc: "Developed a predictive model using the UCI Cleveland dataset to identify heart disease risk. Achieved up to 90% accuracy with SVM, benchmarked against other algorithms. Showcases potential in healthcare analytics."
+      metric: "Up to 90% accuracy (SVM)",
+      summary: "Predicts heart disease risk from the UCI Cleveland dataset, benchmarking four models.",
+      impact: "Shows why comparing several models matters before trusting one.",
+      stack: ["Python", "SVM", "Random Forest", "XGBoost", "Logistic Regression"],
+      repo: GH + "Heart-Disease-Project"
     },
     "tictactoe": {
-      tag: "Jun 2024",
+      tag: "Jun 2024 · Game",
       title: "Interactive Tic-Tac-Toe Game (Java + Swing)",
-      desc: "Two-player GUI-based game with win/tie detection and real-time status updates, built with a pastel-themed interface."
+      summary: "A two-player desktop game with win and tie detection and a pastel-themed interface.",
+      stack: ["Java", "Swing"],
+      repo: GH + "TicTacToe-Game-Java"
     },
     "2048fruit": {
       tag: "Game",
-      title: "2048 — Fruit Edition",
-      desc: "A fruit-themed spin on the classic 2048 tile-merging puzzle game."
+      title: "2048: Fruit Edition",
+      image: "img/projects/2048-fruit.jpg",
+      imageAlt: "2048 Fruit Market board with cherry, grape, strawberry and lemon tiles on a wooden crate",
+      summary: "A fruit-themed 2048: matching fruit merge up from Cherry to the Golden Mango.",
+      stack: ["HTML", "CSS", "JavaScript"],
+      repo: GH + "2048-fruit"
     },
     "mirrorbeam": {
       tag: "Game",
       title: "Mirror Beam",
-      desc: "A puzzle game built around redirecting a beam of light through mirrors to reach a target."
+      summary: "A puzzle game about redirecting a beam of light through mirrors to reach a target.",
+      stack: ["Game"]
     },
     "pixeldream": {
       tag: "Game",
       title: "Pixel Dream",
-      desc: "A small pixel-art style game project exploring level design and lightweight game mechanics."
+      summary: "A small pixel-art game exploring level design and lightweight mechanics.",
+      stack: ["Game"]
     }
   };
 
   // ---------- Modal ----------
   var overlay = document.getElementById("modal-overlay");
-  var modalTag = document.getElementById("modal-tag");
-  var modalTitle = document.getElementById("modal-title");
-  var modalDesc = document.getElementById("modal-desc");
   var closeBtn = document.getElementById("modal-close");
+  var el = function (id) { return document.getElementById(id); };
   var lastFocused = null;
 
+  function fill(listEl, items) {
+    listEl.textContent = "";
+    (items || []).forEach(function (t) {
+      var li = document.createElement("li");
+      li.textContent = t;
+      listEl.appendChild(li);
+    });
+  }
+
   function openModal(key) {
-    var data = projects[key];
-    if (!data) return;
-    modalTag.textContent = data.tag;
-    modalTitle.textContent = data.title;
-    modalDesc.textContent = data.desc;
+    var d = projects[key];
+    if (!d) return;
+
+    var media = el("modal-media");
+    media.textContent = "";
+    media.className = "modal-media";
+    if (d.image) {
+      var img = document.createElement("img");
+      img.src = d.image;
+      img.alt = d.imageAlt || "";
+      media.appendChild(img);
+    } else {
+      media.classList.add("modal-media--art");
+      var art = document.createElement("span");
+      art.className = "modal-media-icon";
+      art.innerHTML = iconSvg[d.icon || key] || "";
+      media.appendChild(art);
+    }
+
+    el("modal-tag").textContent = d.tag;
+    el("modal-title").textContent = d.title;
+    el("modal-summary").textContent = d.summary;
+
+    fill(el("modal-built"), d.built);
+    el("modal-built-wrap").hidden = !(d.built && d.built.length);
+
+    el("modal-impact").textContent = d.impact || "";
+    el("modal-impact-wrap").hidden = !d.impact;
+
+    var stackItems = (d.metric ? [d.metric] : []).concat(d.stack || []);
+    fill(el("modal-stack"), stackItems);
+    if (d.metric) el("modal-stack").firstChild.className = "is-metric";
+    el("modal-stack-wrap").hidden = !stackItems.length;
+
+    var repo = el("modal-repo");
+    repo.hidden = !d.repo;
+    if (d.repo) repo.href = d.repo;
+
     lastFocused = document.activeElement;
     overlay.classList.add("is-open");
+    overlay.querySelector(".modal").scrollTop = 0;
     closeBtn.focus();
     document.body.style.overflow = "hidden";
   }
@@ -240,9 +385,9 @@
     if (lastFocused) lastFocused.focus();
   }
 
-  document.querySelectorAll("[data-project]").forEach(function (el) {
-    el.addEventListener("click", function () {
-      openModal(el.getAttribute("data-project"));
+  document.querySelectorAll("[data-project]").forEach(function (card) {
+    card.addEventListener("click", function () {
+      openModal(card.getAttribute("data-project"));
     });
   });
 
@@ -251,6 +396,13 @@
     if (e.target === overlay) closeModal();
   });
   document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape" && overlay.classList.contains("is-open")) closeModal();
+    if (!overlay.classList.contains("is-open")) return;
+    if (e.key === "Escape") closeModal();
+    if (e.key === "Tab") {
+      var f = overlay.querySelectorAll("button, a[href]:not([hidden])");
+      var first = f[0], last = f[f.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    }
   });
 })();

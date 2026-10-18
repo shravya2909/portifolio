@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shravya Gadupuri — Portfolio</title>
-<meta name="description" content="Shravya Gadupuri — Project Coordinator turned technically-fluent delivery lead. Portfolio and case studies.">
+<title>Shravya Gadupuri | Portfolio</title>
+<meta name="description" content="Shravya Gadupuri: Project Coordinator turned technically fluent delivery lead. Portfolio and case studies.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,6 +15,7 @@
 <body>
 
 <div class="grain-overlay" aria-hidden="true"></div>
+<div class="scroll-progress" aria-hidden="true"><span id="scroll-progress-bar"></span></div>
 
 <!-- ============ NAV ============ -->
 <nav class="site-nav" aria-label="Primary">
@@ -29,6 +30,7 @@
     <a href="#skills">Skills</a>
     <a href="#education">Education</a>
     <a href="#contact">Contact</a>
+    <a href="resume2026.pdf" download class="nav-resume">Résumé</a>
   </div>
 </nav>
 
@@ -48,7 +50,7 @@
       <p class="hero-tagline" data-hero-el="tagline">Turning complexity into systems that ship.</p>
 
       <div class="hero-meta" data-hero-el="meta">
-        <p class="hero-role">Project Coordinator, KaarTech —<br>building toward Product &amp; Engineering Management</p>
+        <p class="hero-role">Project Coordinator, KaarTech.<br>Building toward Product &amp; Engineering Management.</p>
         <div class="hero-actions">
           <a href="#work" class="btn btn-solid">View Work</a>
           <a href="resume2026.pdf" download class="btn btn-outline">Download Résumé</a>
@@ -57,12 +59,10 @@
     </div>
 
     <!--
-      HERO PORTRAIT — img/portrait-cutout.png is the supplied background-removed
-      cutout (shravya-hero-photo.png), placed as-is inside an arch-topped frame.
-      To swap the photo later: drop a new transparent cutout at
-      img/portrait-cutout.png (same head-and-shoulders-to-waist crop works best)
-      and update the aspect-ratio on .hero-photo-frame in css/style.css if its
-      pixel dimensions differ from 651×1024.
+      HERO PORTRAIT: img/portrait-cutout.png is the supplied background-removed
+      cutout, placed inside an arch-topped frame. To swap it, drop a new
+      transparent cutout at the same path and update the aspect-ratio on
+      .hero-photo-frame in css/style.css if its pixel dimensions differ from 651x1024.
     -->
     <div class="hero-photo-slot" data-hero-el="photo">
       <div class="hero-photo-frame">
@@ -85,17 +85,17 @@
   </div>
   <div class="featured-tiles">
     <button class="featured-tile reveal-up" data-project="sprint-health" style="--d:0s">
-      <span class="featured-tile-visual featured-tile-visual--a" aria-hidden="true"><span class="project-icon" data-icon="sprint-health"></span></span>
+      <span class="featured-tile-visual" aria-hidden="true"><span class="project-icon" data-icon="sprint-health"></span></span>
       <span class="featured-tile-index">Analytics &amp; Delivery Tooling</span>
       <h3>Sprint Health Dashboard</h3>
     </button>
     <button class="featured-tile reveal-up" data-project="crispr" style="--d:0.12s">
-      <span class="featured-tile-visual featured-tile-visual--b" aria-hidden="true"><span class="project-icon" data-icon="crispr"></span></span>
+      <span class="featured-tile-visual" aria-hidden="true"><span class="project-icon" data-icon="crispr"></span></span>
       <span class="featured-tile-index">Applied Deep Learning</span>
       <h3>CRISPR gRNA Prediction</h3>
     </button>
     <button class="featured-tile reveal-up" data-project="jarvis" style="--d:0.24s">
-      <span class="featured-tile-visual featured-tile-visual--c" aria-hidden="true"><span class="project-icon" data-icon="jarvis"></span></span>
+      <span class="featured-tile-visual" aria-hidden="true"><span class="project-icon" data-icon="jarvis"></span></span>
       <span class="featured-tile-index">Voice &amp; NLP Assistant</span>
       <h3>JARVIS</h3>
     </button>
@@ -112,19 +112,13 @@
   </div>
 
   <div class="about-body">
-    <p class="about-lede reveal-up">Hi — I'm Shravya. If you asked the people I've worked with what I'm actually good at, most of them wouldn't say "coding" or "project plans." They'd say I'm the one who shows up to a mess and, a few weeks later, there's a system where the mess used to be — watching order emerge from chaos, and knowing I'm the reason it did.</p>
+    <p class="about-lede reveal-up">Hi, I'm Shravya. I'm the one who shows up to a mess and, a few weeks later, leaves a system in its place. Order from chaos is the part of this work I love most.</p>
 
-    <p class="reveal-up">It didn't start that way. I started in machine learning, interning at <strong>Spydx</strong>, where I spent most of my time learning and observing how ML and deep learning concepts actually get applied to real-world projects — not client-facing yet, not owning a deployed solution, just paying close attention to how the theory turned into something usable. It was my first real look at the gap between knowing a concept and knowing how it gets used.</p>
+    <p class="reveal-up">I started in machine learning at <strong>Spydx</strong>, learning how ML concepts get applied to real projects. Then I moved into SAP as an <strong>SAP analyst intern</strong>, learning how it's used, why it's sold, and the business case behind it.</p>
 
-    <p class="reveal-up">From there I went a layer deeper into the enterprise side, as an <strong>SAP analyst intern</strong> — learning how SAP systems are actually used, why they're sold to customers in the first place, and the business case underneath most SAP engagements. It wasn't hands-on technical work yet, but it's why I can now sit in a room where SAP comes up and genuinely follow the conversation instead of just nodding along.</p>
+    <p class="reveal-up">At <strong>Ktern</strong>, KaarTech's AI product arm, I worked with enterprise clients on where AI agents could take manual effort off a team's plate. Now, as <strong>Project Coordinator at KaarTech</strong>, I own delivery and the client relationship across three UK &amp; Ireland accounts: BAE Systems, Ramsay Health Care and Life Health Foods.</p>
 
-    <p class="reveal-up">That grounding is what let the next step click. As a <strong>Customer Success Engineer in AI Automation at Ktern</strong> — KaarTech's AI product arm — I worked directly with enterprise clients figuring out where AI agents could realistically take manual effort off a team's plate — every opportunity had to answer two questions at once: can we build this, and does it move the needle on margin and ROI for the client. That's where the technical and client-facing sides of me finally started talking to each other.</p>
-
-    <p class="reveal-up">Today, as a <strong>Project Coordinator at KaarTech</strong>, it comes together. I coordinate across three client accounts in the UK &amp; Ireland region — <strong>BAE Systems</strong> and <strong>Ramsay Health Care</strong> on AMS/support, and <strong>Life Health Foods</strong> on an ECC-to-S/4HANA transformation — and I own delivery, resourcing, and the client relationship across all of it. Accountability doesn't get to be selective: it's not just claiming the wins, it's owning the misses too.</p>
-
-    <p class="reveal-up">None of this was a random walk. ML taught me to scope an ambiguous problem. SAP taught me how enterprise systems actually work. Customer success taught me to connect technical possibility to business value. Coordination taught me to hold all of it — timelines, people, budgets, trust — at once. Each stage handed me the skill I needed for the next, and it's pointing somewhere specific: my next step in <strong>project, product, or engineering management</strong>, where I get to do all of this on purpose.</p>
-
-    <p class="reveal-up">Outside of client calls and status decks, I'm genuinely a jack-of-all-trades — music, writing, photography, DIY projects, a running interest in interior and fashion design. Same instinct as the day job: taking something with too many moving parts and finding the version with taste and order. Chennai born and raised, and it shows.</p>
+    <p class="reveal-up">It wasn't a random walk. Each stage gave me the skill for the next, and it points at <strong>project, product or engineering management</strong>. Outside work I'm a jack-of-all-trades: music, writing, photography, DIY and design. Chennai born and raised, and it shows.</p>
   </div>
 </section>
 
@@ -134,59 +128,72 @@
     <span class="section-mark section-mark--on-dark" data-icon="experience" aria-hidden="true"></span>
     <p class="section-kicker section-kicker--on-dark">Experience</p>
     <h2 class="section-title section-title--on-dark">Where I've worked</h2>
-    <p class="section-sub section-sub--on-dark">Six roles, one throughline: scope it, understand the system underneath it, connect it to the client, then own the delivery.</p>
   </div>
 
-  <ol class="timeline">
-    <li class="timeline-item reveal-left">
-      <div class="timeline-date">Jul 2026 — Present</div>
-      <div class="timeline-body">
+  <div class="xp-wrap">
+  <span class="xp-rail" aria-hidden="true"><span class="xp-rail-fill" id="xp-rail-fill"></span></span>
+  <ol class="xp-timeline" id="xp-timeline">
+    <li class="xp-item xp-item--current">
+      <span class="xp-dot" aria-hidden="true"></span>
+      <div class="xp-when"><span class="xp-date">Jul 2026 – Present</span><span class="xp-now">Current</span></div>
+      <div class="xp-card">
         <h3>Project Coordinator</h3>
-        <p class="timeline-org">KaarTech</p>
-        <p>Coordinate delivery of enterprise SAP engagements — tracking milestones, timelines, and cross-team communication across three UK &amp; Ireland client accounts: BAE Systems and Ramsay Health Care on AMS/support, and Life Health Foods on an active ECC-to-S/4HANA transformation. Sit at the intersection of the delivery team and the client relationship, which means the job is as much about surfacing risk early and communicating it plainly as it is about the plan itself.</p>
+        <p class="xp-org">KaarTech</p>
+        <p>Coordinating delivery across three UK &amp; Ireland SAP accounts: BAE Systems and Ramsay Health Care (AMS/support) and Life Health Foods (ECC to S/4HANA).</p>
       </div>
     </li>
-    <li class="timeline-item reveal-left">
-      <div class="timeline-date">May 2026 — Jul 2026</div>
-      <div class="timeline-body">
+
+    <li class="xp-item">
+      <span class="xp-dot" aria-hidden="true"></span>
+      <div class="xp-when"><span class="xp-date">May 2026 – Jul 2026</span></div>
+      <div class="xp-card">
         <h3>Customer Success Engineer (AI Automation), Intern</h3>
-        <p class="timeline-org">Ktern</p>
-        <p>Onboarded enterprise SAP customers onto AI agents — configuring them to each customer's specific landscape and presenting the results back to stakeholders in terms they could act on. Led an AMS baseline assessment for a global manufacturing client: mapped monitoring coverage across BTP, IDoc, RFC, GRC and Solution Manager, then built the assessment framework and KPI reporting used to track it going forward. Channelled customer issues and feedback into prioritised requirements for product and engineering, effectively working the seam between what the client experienced and what the build teams needed to hear.</p>
+        <p class="xp-org">Ktern</p>
+        <p>Onboarded SAP customers onto AI agents and led an AMS baseline assessment for a global manufacturer, building the framework and KPI reporting.</p>
       </div>
     </li>
-    <li class="timeline-item reveal-left">
-      <div class="timeline-date">Jun 2025 — Jul 2025</div>
-      <div class="timeline-body">
+
+    <li class="xp-item">
+      <span class="xp-dot" aria-hidden="true"></span>
+      <div class="xp-when"><span class="xp-date">Jun 2025 – Jul 2025</span></div>
+      <div class="xp-card">
         <h3>Machine Learning Intern</h3>
-        <p class="timeline-org">Spydx</p>
-        <p>Built and deployed ML solutions end to end, scoping requirements directly with client stakeholders rather than working from a fixed spec — the first place I learned that translating a fuzzy business problem into a well-posed technical one is its own distinct skill.</p>
+        <p class="xp-org">Spydx</p>
+        <p>Learned how ML and deep learning get applied to real-world projects.</p>
       </div>
     </li>
-    <li class="timeline-item reveal-left">
-      <div class="timeline-date">Aug 2024 — Oct 2024</div>
-      <div class="timeline-body">
+
+    <li class="xp-item">
+      <span class="xp-dot" aria-hidden="true"></span>
+      <div class="xp-when"><span class="xp-date">Aug 2024 – Oct 2024</span></div>
+      <div class="xp-card">
         <h3>Project Manager</h3>
-        <p class="timeline-org">Wizoona</p>
-        <p>Led early-stage product delivery across UI/UX, prototyping and strategy with a cross-functional team, working in the ambiguity that comes with an early-stage product where the plan and the product were often being defined at the same time.</p>
+        <p class="xp-org">Wizoona</p>
+        <p>Led early-stage product delivery across UI/UX, prototyping and strategy.</p>
       </div>
     </li>
-    <li class="timeline-item reveal-left">
-      <div class="timeline-date">Jul 2024 — Oct 2024</div>
-      <div class="timeline-body">
+
+    <li class="xp-item">
+      <span class="xp-dot" aria-hidden="true"></span>
+      <div class="xp-when"><span class="xp-date">Jul 2024 – Oct 2024</span></div>
+      <div class="xp-card">
         <h3>Project Management Intern</h3>
-        <p class="timeline-org">Foruppo</p>
-        <p>Coordinated delivery across distributed teams, tracking milestones and dependencies using collaborative planning tools — an early lesson in how much of coordination is really just making sure the right information reaches the right person before it becomes a problem.</p>
+        <p class="xp-org">Foruppo</p>
+        <p>Coordinated delivery across distributed teams, tracking milestones and dependencies.</p>
       </div>
     </li>
-    <li class="timeline-item reveal-left">
-      <div class="timeline-date">Sep 2023 — Present</div>
-      <div class="timeline-body">
+
+    <li class="xp-item">
+      <span class="xp-dot" aria-hidden="true"></span>
+      <div class="xp-when"><span class="xp-date">Sep 2023 – Present</span><span class="xp-now">Ongoing</span></div>
+      <div class="xp-card">
         <h3>Technical Support Engineer</h3>
-        <p class="timeline-org">Sruthi Industrial Plastics</p>
-        <p>Automated manufacturing and inventory reporting, replacing manual tracking with data-driven dashboards — a long-running, ongoing engagement that's quietly shaped how I think about turning messy, manual processes into something that reports on itself.</p>
+        <p class="xp-org">Sruthi Industrial Plastics</p>
+        <p>Replaced manual manufacturing and inventory tracking with data-driven dashboards.</p>
       </div>
     </li>
   </ol>
+  </div>
 </section>
 
 <!-- ============ PROJECTS ============ -->
@@ -194,7 +201,7 @@
   <div class="section-head reveal-up">
     <p class="section-kicker section-kicker--on-dark">Projects</p>
     <h2 class="section-title section-title--on-dark">Selected work</h2>
-    <p class="section-sub section-sub--on-dark">Ordered by scope and depth. Tap any card for the fuller story.</p>
+    <p class="section-sub section-sub--on-dark">Tap a card for details.</p>
   </div>
 
   <div class="project-grid" id="project-grid">
@@ -203,48 +210,48 @@
       <span class="project-icon" data-icon="sprint-health" aria-hidden="true"></span>
       <span class="project-card-tag">Featured</span>
       <h3>Sprint Health Dashboard</h3>
-      <p>A sprint analytics dashboard surfacing team velocity, risk signals, and delivery health for stakeholders who need the status without asking for it.</p>
+      <p>Sprint analytics for engineering managers: velocity, carryover and risk alerts.</p>
     </button>
 
     <button class="project-card size-xl reveal-scale" data-project="crispr" style="--d:0.1s">
       <span class="project-icon" data-icon="crispr" aria-hidden="true"></span>
       <span class="project-card-tag">Featured</span>
-      <h3>Deep Learning-Based Prediction of CRISPR gRNA Efficiency and Off-Target Risk</h3>
-      <p>A CNN-based approach to predicting CRISPR guide RNA efficiency and off-target risk.</p>
+      <h3>CRISPR gRNA Efficiency and Off-Target Prediction</h3>
+      <p>A CNN predicting guide RNA efficiency and off-target risk.</p>
     </button>
 
     <button class="project-card size-lg reveal-scale" data-project="jarvis" style="--d:0.05s">
       <span class="project-icon" data-icon="jarvis" aria-hidden="true"></span>
       <span class="project-card-tag">Jan – Mar 2025</span>
-      <h3>JARVIS — Voice-Activated Personal AI Assistant</h3>
-      <p>Desktop-based AI assistant inspired by Marvel's J.A.R.V.I.S., integrating speech recognition, NLP, and APIs for tasks like web search, email, and reminders.</p>
+      <h3>JARVIS</h3>
+      <p>A voice-activated desktop AI assistant.</p>
     </button>
 
     <button class="project-card size-lg reveal-scale" data-project="scoliosis" style="--d:0.15s">
       <span class="project-icon" data-icon="scoliosis" aria-hidden="true"></span>
       <span class="project-card-tag">Mar – Jun 2025</span>
-      <h3>Scoliosis Detection using Machine Learning</h3>
-      <p>A CNN model detecting scoliosis from spine X-ray images with high accuracy, aimed at supporting earlier diagnosis and reducing manual interpretation errors.</p>
+      <h3>Scoliosis Detection</h3>
+      <p>A CNN detecting scoliosis from spine X-rays.</p>
     </button>
 
     <button class="project-card size-md reveal-scale" data-project="medico">
       <span class="project-icon" data-icon="medico" aria-hidden="true"></span>
       <span class="project-card-tag">Aug 2025 – Present</span>
-      <h3>Medico — AI-Integrated Hospital Management System</h3>
-      <p>A hospital management platform with AI-driven modules for appointments, records, and analytics, improving workflow automation and patient care efficiency.</p>
+      <h3>Medico</h3>
+      <p>An AI-integrated hospital management system.</p>
     </button>
 
     <button class="project-card size-md reveal-scale" data-project="numberplate" style="--d:0.1s">
       <span class="project-icon" data-icon="numberplate" aria-hidden="true"></span>
       <span class="project-card-tag">Aug 2025</span>
-      <h3>Number Plate Detection using YOLOv8 and EasyOCR</h3>
-      <p>A complete pipeline detecting vehicle number plates with a custom-trained YOLOv8 model, integrated with EasyOCR for text extraction.</p>
+      <h3>Number Plate Detection</h3>
+      <p>A YOLOv8 and EasyOCR pipeline.</p>
     </button>
 
     <button class="project-card size-sm reveal-scale" data-project="heart" style="--d:0.2s">
       <span class="project-icon" data-icon="heart" aria-hidden="true"></span>
-      <h3>Heart Disease Prediction using Machine Learning</h3>
-      <p>Predictive model on the UCI Cleveland dataset, up to 90% accuracy with SVM, benchmarked against other algorithms.</p>
+      <h3>Heart Disease Prediction</h3>
+      <p>Risk prediction, up to 90% accuracy.</p>
     </button>
 
   </div>
@@ -255,7 +262,7 @@
       <span>Jun 2024</span>
     </button>
     <button class="project-tile reveal-up" data-project="2048fruit" style="--d:0.06s">
-      <h4>2048 — Fruit Edition</h4>
+      <h4>2048: Fruit Edition</h4>
       <span>Game</span>
     </button>
     <button class="project-tile reveal-up" data-project="mirrorbeam" style="--d:0.12s">
@@ -269,17 +276,33 @@
   </div>
 </section>
 
-<!-- ============ PROJECT MODAL ============ -->
+<!-- ============ PROJECT MODAL (case study) ============ -->
 <div class="modal-overlay" id="modal-overlay">
   <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
     <button class="modal-close" id="modal-close" aria-label="Close">&times;</button>
-    <p class="modal-tag" id="modal-tag"></p>
-    <h3 class="modal-title" id="modal-title"></h3>
-    <p class="modal-desc" id="modal-desc"></p>
+    <div class="modal-media" id="modal-media"></div>
+    <div class="modal-content">
+      <p class="modal-tag" id="modal-tag"></p>
+      <h3 class="modal-title" id="modal-title"></h3>
+      <p class="modal-summary" id="modal-summary"></p>
+      <div class="modal-section" id="modal-built-wrap">
+        <h4>What I built</h4>
+        <ul class="modal-list" id="modal-built"></ul>
+      </div>
+      <div class="modal-section modal-impact" id="modal-impact-wrap">
+        <h4>Impact</h4>
+        <p id="modal-impact"></p>
+      </div>
+      <div class="modal-section" id="modal-stack-wrap">
+        <h4>Stack</h4>
+        <ul class="modal-stack" id="modal-stack"></ul>
+      </div>
+      <a class="btn btn-gh" id="modal-repo" href="#" target="_blank" rel="noopener">View on GitHub</a>
+    </div>
   </div>
 </div>
 
-<!-- ============ SKILLS — "What I Do" treatment ============ -->
+<!-- ============ SKILLS: "What I Do" treatment ============ -->
 <section class="section skills panel panel--cream" id="skills">
   <div class="section-head reveal-up">
     <p class="section-kicker">What I Do</p>
@@ -292,7 +315,7 @@
         <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="15" stroke="currentColor" stroke-width="1.5"/><circle cx="20" cy="20" r="4" fill="currentColor"/><path d="M20 5V11M20 29V35M5 20H11M29 20H35" stroke="currentColor" stroke-width="1.5"/></svg>
       </span>
       <h3>Delivery &amp; Coordination</h3>
-      <p class="skill-desc">Keeping a live engagement honest — tracking what's actually true against what the plan says, and closing that gap before the client has to ask.</p>
+      <p class="skill-desc">Keeping live engagements on track and honest.</p>
       <ul class="skill-tags">
         <li>Project tracking</li>
         <li>Stakeholder management</li>
@@ -305,9 +328,9 @@
         <svg viewBox="0 0 40 40" fill="none"><rect x="8" y="6" width="24" height="8" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="8" y="16" width="24" height="8" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="8" y="26" width="24" height="8" rx="1" stroke="currentColor" stroke-width="1.5"/></svg>
       </span>
       <h3>Enterprise &amp; Data</h3>
-      <p class="skill-desc">Fluent enough in SAP's plumbing to sit in the architecture conversation, and comfortable turning raw operational data into something a stakeholder can decide from.</p>
+      <p class="skill-desc">SAP, and turning data into decisions.</p>
       <ul class="skill-tags">
-        <li>SAP / ERP — AMS, WRICEF, BTP, IDoc, RFC, Solution Manager</li>
+        <li>SAP / ERP: AMS, WRICEF, BTP, IDoc, RFC, Solution Manager</li>
         <li>Power BI</li>
         <li>Tableau</li>
         <li>Excel</li>
@@ -319,7 +342,7 @@
         <svg viewBox="0 0 40 40" fill="none"><path d="M14 12L6 20L14 28" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M26 12L34 20L26 28" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 8L18 32" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
       </span>
       <h3>Technical</h3>
-      <p class="skill-desc">Hands-on enough to build the thing myself when it's faster than explaining it to someone else — from a working model to a small internal tool.</p>
+      <p class="skill-desc">Hands-on enough to build it myself.</p>
       <ul class="skill-tags">
         <li>Python</li>
         <li>Django</li>
@@ -343,13 +366,13 @@
   <div class="edu-list">
     <div class="edu-item reveal-left">
       <h3>B.E. Computer Science</h3>
-      <p class="edu-org">SRM Valliammai Engineering College — CGPA 8.8</p>
-      <p class="edu-date">Nov 2022 — May 2026</p>
+      <p class="edu-org">SRM Valliammai Engineering College · CGPA 8.8</p>
+      <p class="edu-date">Nov 2022 – May 2026</p>
     </div>
     <div class="edu-item reveal-left" style="--d:0.1s">
       <h3>CBSE</h3>
-      <p class="edu-org">Chinmaya Vidyalaya, Annanagar — 473/500</p>
-      <p class="edu-date">Apr 2010 — May 2022</p>
+      <p class="edu-org">Chinmaya Vidyalaya, Annanagar · 473/500</p>
+      <p class="edu-date">Apr 2010 – May 2022</p>
     </div>
   </div>
 
@@ -379,9 +402,9 @@
     </div>
   </div>
 
-  <div class="cert-cluster reveal-up" style="--d:0.1s">
-    <h3 class="cert-cluster-title">Anthropic / Claude Learning Track</h3>
-    <p class="cert-cluster-note">All 12 courses completed as part of a mandatory GE26 intern learning track.</p>
+  <details class="cert-cluster cert-details reveal-up" style="--d:0.1s">
+    <summary><span class="cert-cluster-title">Anthropic / Claude Learning Track</span><span class="cert-count">12 courses</span></summary>
+    <p class="cert-cluster-note">Completed as part of a mandatory GE26 intern learning track.</p>
     <div class="cert-pills">
       <span class="cert-pill">Claude 101</span>
       <span class="cert-pill">AI Capabilities &amp; Limitations</span>
@@ -396,7 +419,7 @@
       <span class="cert-pill">Claude with Google Cloud Vertex AI</span>
       <span class="cert-pill">Introduction to Agent Skills</span>
     </div>
-  </div>
+  </details>
 </section>
 
 <!-- ============ VOLUNTEERING & TEACHING ============ -->
@@ -405,31 +428,32 @@
     <span class="section-mark section-mark--on-dark" data-icon="volunteering" aria-hidden="true"></span>
     <p class="section-kicker section-kicker--on-dark">Volunteering &amp; Teaching</p>
     <h2 class="section-title section-title--on-dark">Time given, not billed</h2>
-    <p class="section-sub section-sub--on-dark">This is the part of my life that runs alongside the career, not underneath it — ongoing, and genuinely chosen rather than added for the resume.</p>
   </div>
 
   <div class="volunteer-list">
     <div class="volunteer-item reveal-left">
       <h3>Tutoring</h3>
       <p class="volunteer-meta">1 year</p>
-      <p>For a year now, I've tutored 10th grade students in Physics, Chemistry, Biology, and Maths, and 11th and 12th grade students in Chemistry, Biology, and Maths — teaching conceptually and practically rather than just theoretically, so it's about application: making sure a student can actually use what they've learned, not just recite it.</p>
+      <p>Science and Maths for grades 10 to 12, taught conceptually and practically so students can apply what they learn.</p>
     </div>
     <div class="volunteer-item reveal-left" style="--d:0.08s">
       <h3>U&amp;I, Chennai</h3>
-      <p class="volunteer-meta">Nov 2022 — Jul 2023</p>
-      <p>Taught underprivileged children school subjects, spoken and written English, and basic life skills, alongside mentoring them — work that combined showing up consistently with nurturing young minds.</p>
+      <p class="volunteer-meta">Nov 2022 – Jul 2023</p>
+      <p>Taught underprivileged children school subjects, English and life skills. Work that combined showing up consistently with nurturing young minds.</p>
     </div>
     <div class="volunteer-item reveal-left" style="--d:0.16s">
       <h3>Kaar Arakattalai</h3>
       <p class="volunteer-meta">KaarTech's NGO wing</p>
-      <p>KaarTech's own NGO wing, working to support underprivileged communities with basic life necessities — a way of extending the same support I bring to client work into the community around it.</p>
+      <p>Supporting underprivileged communities with basic life necessities.</p>
     </div>
     <div class="volunteer-item reveal-left" style="--d:0.24s">
       <h3>Chinmaya Seva</h3>
       <p class="volunteer-meta">School years</p>
-      <p>Volunteered during my school years serving in orphanages and old-age homes — early, formative time that shaped a lot of how I think about showing up for people who need consistency more than anything else.</p>
+      <p>Served in orphanages and old-age homes.</p>
     </div>
   </div>
+</section>
+
 </section>
 
 <!-- ============ BEYOND THE DESK ============ -->
@@ -439,7 +463,7 @@
     <p class="section-kicker">Beyond the Desk</p>
     <h2 class="section-title">A little more about me</h2>
   </div>
-  <p class="beyond-text reveal-up">Long before status reports, I was the one signing up for every arts, craft, and debate competition going — through school and into college. Competed and won across all three, more times than I can count. If something looked like a new skill or just sounded fun outside the usual routine, I was probably the first to try it. Different stage, same instinct: show up, bring some order to the chaos, and see it through.</p>
+  <p class="beyond-text reveal-up">Long before status reports, I was signing up for every arts, craft and debate competition, through school and college, and winning across all three. If something looked like a new skill or just fun, I was usually the first to try it.</p>
 </section>
 
 <!-- ============ SIGN-OFF ============ -->
